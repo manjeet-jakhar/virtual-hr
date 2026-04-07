@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
-import Login from "./Login";
-import EmployerDashboard from "./EmployerDashboard";
-import HRDashboard from "./HRDashboard";
-import ProtectedRoute from "./ProtectedRoute";
-import Interview from "./Interview";
+import Login from "./Login.jsx";
+import EmployerDashboard from "./EmployerDashboard.jsx";
+import HRDashboard from "./HRDashboard.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
+import Interview from "./Interview.jsx";
 
 function App() {
   return (

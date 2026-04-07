@@ -15,11 +15,11 @@ function HRDashboard() {
   const [mode, setMode] = useState("Video");
 
   const fetchData = () => {
-    fetch("http://localhost:8000/tasks/")
+    fetch("https://virtual-hr-backend.onrender.com/tasks/")
       .then((res) => res.json())
       .then((data) => setTasks(data));
 
-    fetch("http://localhost:8000/interviews/")
+    fetch("https://virtual-hr-backend.onrender.com/interviews/")
       .then((res) => res.json())
       .then((data) => setInterviews(data));
   };
@@ -32,7 +32,7 @@ function HRDashboard() {
 
   // 🔥 CREATE TASK
   const createTask = async () => {
-    await fetch("http://localhost:8000/tasks/", {
+    await fetch("https://virtual-hr-backend.onrender.com/tasks/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +56,7 @@ function HRDashboard() {
       return;
     }
 
-    await fetch("http://localhost:8000/interviews/", {
+    await fetch("https://virtual-hr-backend.onrender.com/interviews/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -78,7 +78,7 @@ function HRDashboard() {
 
   // 🔥 UPDATE TASK
   const updateStatus = async (id, status) => {
-    await fetch(`http://localhost:8000/tasks/${id}`, {
+    await fetch(`https://virtual-hr-backend.onrender.com/tasks/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ status }),

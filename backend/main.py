@@ -131,7 +131,7 @@ def schedule_interview(interview: schemas.InterviewCreate, db: Session = Depends
     db.commit()
 
     # 🔥 CALL LINK
-    call_link = f"http://localhost:5173/call-room/{new_interview.id}"
+    call_link = f"https://virtual-hr.vercel.app/call-room/{new_interview.id}"
 
     # 🔥 SEND EMAIL
     send_email(

@@ -7,7 +7,7 @@ function Interview() {
   const [callLink, setCallLink] = useState(""); // 🔥 NEW
 
   const handleSubmit = async () => {
-    const response = await fetch("http://localhost:8000/interviews/", {
+    const response = await fetch("https://virtual-hr-backend.onrender.com/interviews/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ function Interview() {
 
           <button
             onClick={() =>
-              (window.location.href = `http://localhost:5173${callLink}`)
+              (window.location.href = `https://virtual-hr-backend.onrender.com${callLink}`)
             }
             style={{
               padding: "8px 15px",

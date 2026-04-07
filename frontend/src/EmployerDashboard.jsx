@@ -10,15 +10,15 @@ function EmployerDashboard() {
 
   // 🔥 Fetch data
   const fetchData = () => {
-    fetch("http://localhost:8000/tasks/")
+    fetch("https://virtual-hr-backend.onrender.com/tasks/")
       .then((res) => res.json())
       .then((data) => setTasks(data));
 
-    fetch("http://localhost:8000/activities/")
+    fetch("https://virtual-hr-backend.onrender.com/activities/")
       .then((res) => res.json())
       .then((data) => setActivities(data));
 
-    fetch("http://localhost:8000/interviews/")
+    fetch("https://virtual-hr-backend.onrender.com/interviews/")
       .then((res) => res.json())
       .then((data) => setInterviews(data));
   };
@@ -44,7 +44,7 @@ function EmployerDashboard() {
       return;
     }
 
-    await fetch("http://localhost:8000/tasks/", {
+    await fetch("https://virtual-hr-backend.onrender.com/tasks/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
